@@ -22,8 +22,9 @@ const NewChurras = () => {
                 setModalVisible(!modalVisible);
               }}
             >
-              <Form/>
+              <Text>X</Text>
             </TouchableHighlight>
+            <Form/>
           </View>
         </View>
       </Modal>

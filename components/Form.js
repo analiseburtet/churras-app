@@ -5,7 +5,7 @@ import { Formik } from 'formik';
 
 const Form = props => (
   <Formik
-    initialValues={{ title : '' , date:"2020-05-15", totalAmount: 0, people: [ {name: "name", amount: 0, isVegan: false, contributed: false}]}}
+    initialValues={{ events: { title : '' , date:"2020-05-15", totalAmount: 0, people: [ {name: "name", amount: 0, isVegan: false, contributed: false} ] } }}
     onSubmit={(values) => {
       AsyncStorage.setItem("event", JSON.stringify(values))
     }}
