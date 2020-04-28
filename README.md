@@ -4,8 +4,8 @@ Goal: Organize your barbecue.
 
 ## Future Features
 
-- Create new barbecue; :construction:
-- Display data in home page; :construction:
+- Create new barbecue; :ballot_box_with_check:
+- Display data in home page; :ballot_box_with_check:
 - Edit/delete event; :construction:
 - Set vegan option; :construction:
 - Mark guests who have already contributed; :construction:

@@ -2,7 +2,7 @@ import React, { Component, useState } from "react";
 import { View, StyleSheet, Image, Text, Alert, Modal, TouchableHighlight } from 'react-native';
 import Form from './Form'
 
-const NewChurras = () => {
+const NewChurras = ({onSubmitForm}) => {
   const [ modalVisible, setModalVisible ] = useState(false);
   return (
     <View style={styles.container}>
@@ -24,24 +24,24 @@ const NewChurras = () => {
             >
               <Text>X</Text>
             </TouchableHighlight>
-            <Form/>
+            <Form onSubmitForm={onSubmitForm}/>
           </View>
         </View>
       </Modal>
       {/* !modal form to add new churras */}
       {/* open modal to create new churras */}
       <TouchableHighlight
-        style={styles.openButton}
+        style={styles.button}
         onPress={() => {
           setModalVisible(true);
         }}
       >
-      
-        <Text style={styles.textStyle}>
-        <Image style={styles.barbecue}
-        source={require('../assets/barbecue.png')}
-      />
-        Novo Churras</Text>
+      <View>
+        <View style={styles.openButton}>
+          <Image style={styles.barbecue} source={require('../assets/barbecue.png')}/>
+        </View>
+        <Text style={styles.textStyle}>Add Barbecue</Text>
+      </View>  
       </TouchableHighlight>
       {/* !open modal to create new churras */}
     </View>
@@ -49,13 +49,9 @@ const NewChurras = () => {
 }
 
 const styles = StyleSheet.create({
-  barbecue: {
-    height: 20,
-    width: 20,
-  },
   modalView: {
+    backgroundColor: 'gainsboro',
     margin: 20,
-    backgroundColor: "white",
     borderRadius: 20,
     padding: 35,
     alignItems: "center",
@@ -69,20 +65,22 @@ const styles = StyleSheet.create({
     elevation: 5
   },
   openButton: {
-    backgroundColor: "orange",
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2
+    backgroundColor: 'orange',
+    width: 60,
+    height: 60,
+    borderRadius: 1000,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  barbecue: {
+    width: 40,
+    height: 30
   },
   textStyle: {
-    color: "white",
-    fontWeight: "bold",
-    textAlign: "center"
-  },
-  container: {
-    flex: 1,
-    marginTop: 70,
-  },
+    color: '#000000',
+    fontWeight: 'bold',
+    fontSize: 20
+  }
 });
 
 export default NewChurras

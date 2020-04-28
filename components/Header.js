@@ -7,7 +7,7 @@ export default function Header() {
     <View>
       <ImageBackground source={Image} style={styles.image}>
       <Text style={styles.title}>
-        Agenda de Churras
+        Barbecue App
       </Text>
       </ImageBackground>
     </View>
@@ -24,6 +24,6 @@ const styles = StyleSheet.create({
   title: {
      color: '#ffffff',
      fontWeight: 'bold',
-     fontSize: 22,
+     fontSize: 30,
   }
 });
