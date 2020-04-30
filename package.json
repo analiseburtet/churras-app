@@ -1,5 +1,5 @@
 {
-  "name": "churras",
+  "name": "awkward-cheese",
   "version": "0.0.0",
   "description": "No description",
   "author": null,
@@ -15,7 +15,6 @@
     "formik": "latest",
     "moment": "latest",
     "react-native-paper": "3.6.0",
-    "react-native-elements": "latest",
     "react-native-datepicker": "latest"
   }
 }
