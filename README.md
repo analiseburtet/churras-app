@@ -6,9 +6,9 @@ Goal: Organize your barbecue.
 
 - Create new barbecue; :ballot_box_with_check:
 - Display data in home page; :ballot_box_with_check:
-- Edit/delete event; :ballot_box_with_check:
-- Set vegan option; :ballot_box_with_check:
-- Mark guests who have already contributed; :ballot_box_with_check:
+- Edit/delete event; :construction:
+- Set vegan option; :construction:
+- Mark guests who have already contributed; :construction:
 - Set default contribution; :construction:
 - Show total amount of people and money per barbecue. :construction:
 
