@@ -1,86 +1,92 @@
-import React, { Component, useState } from "react";
-import { View, StyleSheet, Image, Text, Alert, Modal, TouchableHighlight } from 'react-native';
-import Form from './Form'
+import React, { Component, useState } from 'react';
+import {
+  View,
+  StyleSheet,
+  Image,
+  Text,
+  Alert,
+  Modal,
+  TouchableHighlight,
+} from 'react-native';
+import Form from './Form';
 
-const NewChurras = ({onSubmitForm}) => {
-  const [ modalVisible, setModalVisible ] = useState(false);
+const NewChurras = ({ onSubmitForm }) => {
+  const [modalVisible, setModalVisible] = useState(false);
   return (
-    <View style={styles.container}>
-    {/* modal form to add new churras */}
+    <View>
       <Modal
+        style={styles.modalView}
         transparent={true}
         visible={modalVisible}
         onRequestClose={() => {
-          Alert.alert("Modal has been closed.");
-        }}
-      >
+          Alert.alert('Modal has been closed.');
+        }}>
         <View style={styles.centeredView}>
-          <View style={styles.modalView}>
+          <View>
             <TouchableHighlight
-              style={{ ...styles.openButton, backgroundColor: "#2196F3" }}
+              style={{ ...styles.openButton, backgroundColor: '#2196F3' }}
               onPress={() => {
                 setModalVisible(!modalVisible);
-              }}
-            >
+              }}>
               <Text>X</Text>
             </TouchableHighlight>
-            <Form onSubmitForm={onSubmitForm}/>
+            <Form onSubmitForm={onSubmitForm} />
           </View>
         </View>
       </Modal>
-      {/* !modal form to add new churras */}
-      {/* open modal to create new churras */}
       <TouchableHighlight
-        style={styles.button}
+        style={styles.openButton}
         onPress={() => {
           setModalVisible(true);
-        }}
-      >
-      <View>
-        <View style={styles.openButton}>
-          <Image style={styles.barbecue} source={require('../assets/barbecue.png')}/>
+        }}>
+        <View>
+          <Image style={styles.plus} source={require('../assets/plus.png')} />
         </View>
-        <Text style={styles.textStyle}>Add Barbecue</Text>
-      </View>  
       </TouchableHighlight>
-      {/* !open modal to create new churras */}
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
-  modalView: {
-    backgroundColor: 'gainsboro',
-    margin: 20,
+  centeredView: {
+    backgroundColor: '#ffffff',
+    borderWidth: 1,
+    borderColor: 'gainsboro',
+    flex: 1,
     borderRadius: 20,
-    padding: 35,
-    alignItems: "center",
-    shadowColor: "#000",
+    padding: 20,
+    margin: 10,
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 2
+      height: 2,
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
-    elevation: 5
+    elevation: 5,
+  },
+  modalView: {
+    margin: 20,
+    backgroundColor: 'orange',
+    padding: 35,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   openButton: {
-    backgroundColor: 'orange',
+    backgroundColor: '#FFD836',
     width: 60,
     height: 60,
     borderRadius: 1000,
-    justifyContent: 'center',
-    alignItems: 'center'
+    position: 'absolute',
+    bottom: -400,
+    right: 10,
   },
-  barbecue: {
-    width: 40,
-    height: 30
-  },
-  textStyle: {
-    color: '#000000',
-    fontWeight: 'bold',
-    fontSize: 20
-  }
 });
 
-export default NewChurras
+export default NewChurras;

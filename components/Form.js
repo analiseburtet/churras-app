@@ -9,7 +9,7 @@ import {
   AsyncStorage,
   FlatList,
   CheckBox,
-  ScrollView
+  ScrollView,
 } from 'react-native';
 import DatePicker from 'react-native-datepicker';
 import { Formik } from 'formik';
@@ -46,46 +46,48 @@ const Form = props => (
     onSubmit={props.onSubmitForm}>
     {({ handleChange, handleBlur, handleSubmit, values }) => (
       <View>
-      <ScrollView>
-        <TextInput
-          placeholder="Title"
-          onChangeText={handleChange('title')}
-          onBlur={handleBlur('title')}
-          value={values.title}
-          title={values.title}
-        />
-        <DatePicker
-          placeholder="Date"
-          onChangeText={handleChange('date')}
-          onBlur={handleBlur('date')}
-          date={values.date}
-          mode="date"
-          onDateChange={handleChange('date')}
-        />
-        <View style={styles.list}>
-          <Text>Paid</Text>
-          <Text>Guest</Text>
-          <Text>Amount</Text>
-          <Text>Vegan</Text>
-          <Text>Drinks</Text>
-        </View>
-        <SafeAreaView>
-          <FlatList
-            data={values.people}
-            keyExtractor={key => values.date}
-            renderItem={({ item }) => (
-              <Item
-                name={item.name}
-                amount={item.amount}
-                isVegan={item.isVegan}
-                contributed={item.contributed}
-                drink={item.drink}
-              />
-            )}
-          />
-        </SafeAreaView>
-        <Button onPress={handleSubmit} title="Save" />
-      </ScrollView>
+        <ScrollView>
+          <View style={styles.list}>
+            <TextInput
+              style={{ height: 40 }}
+              placeholder="Type here"
+              onChangeText={handleChange('title')}
+              onBlur={handleBlur('title')}
+              value={values.title}
+              title={values.title}
+            />
+            <DatePicker
+              onChangeText={handleChange('date')}
+              onBlur={handleBlur('date')}
+              date={values.date}
+              mode="date"
+              onDateChange={handleChange('date')}
+            />
+          </View>
+          <View style={styles.list}>
+            <Text style={styles.listItem}>Paid</Text>
+            <Text style={styles.listItem}>Guest</Text>
+            <Text style={styles.listItem}>Amount</Text>
+            <Text style={styles.listItem}>Vegan</Text>
+            <Text style={styles.listItem}>Drinks</Text>
+          </View>
+          <SafeAreaView>
+            <FlatList
+              data={values.people}
+              keyExtractor={key => values.date}
+              renderItem={({ item }) => (
+                <Item
+                  name={item.name}
+                  amount={item.amount}
+                  isVegan={item.isVegan}
+                  contributed={item.contributed}
+                  drink={item.drink}
+                />
+              )}
+            />
+          </SafeAreaView>
+          <Button onPress={handleSubmit} title="Save" color="green" />
+        </ScrollView>
       </View>
     )}
   </Formik>
@@ -110,8 +112,12 @@ export const displayData = async () => {
 };
 
 const styles = StyleSheet.create({
+  listItem: {
+    fontSize: 20
+  },
   list: {
     flexDirection: 'row',
-    justifyContent: 'space-between'
-  }
-})
+    justifyContent: 'space-between',
+    padding: 10,
+  },
+});

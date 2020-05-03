@@ -66,9 +66,7 @@ export default function ChurrasList() {
           keyExtractor={item => item.id}
         />
       </SafeAreaView>
-      <View style={styles.addEvent}>
-        <NewChurras onSubmitForm={onSubmitForm} />
-      </View>
+      <NewChurras onSubmitForm={onSubmitForm} />
     </View>
   );
 }
@@ -97,24 +95,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     flex: 1,
     fontWeight: 'bold',
-  },
-  addEvent: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    textAlign: 'center',
-    backgroundColor: 'gainsboro',
-    borderRadius: 20,
-    padding: 20,
-    marginVertical: 8,
-    marginHorizontal: 16,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
   },
   deleteBin: {
     width: 20,
