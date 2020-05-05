@@ -14,6 +14,7 @@ Goal: Organize your barbecue.
 
 ### Play it
 
-[here](https://snack.expo.io/@bolinhofrito/churras) :iphone:
+[here](https://snack.expo.io/@bolinhofrito/barbecue-app) :iphone:
+
 
 Made with :heart:
