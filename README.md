@@ -10,6 +10,9 @@ Get organized with your barbecues. With this App you should be able to:
 
 ## The App's face
 
+Home page.
+![Home page](https://github.com/analiseburtet/churras-app/blob/master/assets/rsz_screenshot_from_2020-05-05_20-36-12.png)
+
 When creating a new barbecue
 ![creating a new event](https://github.com/analiseburtet/churras-app/blob/master/assets/rsz_screenshot_from_2020-05-05_20-37-01.png)
 
