@@ -8,6 +8,12 @@ Get organized with your barbecues. With this App you should be able to:
 - Set a default value to be contributed by the guests, or let it up to them;
 - Show total amount of people and money per barbecue.
 
+## The App's face
+
+When creating a new barbecue
+![creating a new event](https://github.com/analiseburtet/churras-app/blob/master/assets/rsz_screenshot_from_2020-05-05_20-37-01.png)
+
+
 ## New to open source? 
 
 [Please check an introduction here](https://www.digitalocean.com/community/tutorial_series/an-introduction-to-open-source)
