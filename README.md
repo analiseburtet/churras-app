@@ -1,20 +1,27 @@
 # :meat_on_bone: React Native App to schedule barbecues :meat_on_bone:
 
-Goal: Organize your barbecue.
+Get organized with your barbecues. With this App you should be able to:
 
-## Future Features
+- Create/Delete/Edit a new barbecue;
+- Add vegetarians and meat-eaters to your barbecue;
+- Drink contribution is optional;
+- Set a default value to be contributed by the guests, or let it up to them;
+- Show total amount of people and money per barbecue.
 
-- Create new barbecue; :ballot_box_with_check:
-- Display data in home page; :ballot_box_with_check:
-- Edit/delete event; :construction:
-- Set vegan option; :construction:
-- Mark guests who have already contributed; :construction:
-- Set default contribution; :construction:
-- Show total amount of people and money per barbecue. :construction:
+## New to open source? 
 
-### Play it
+[Please check an introduction here](https://www.digitalocean.com/community/tutorial_series/an-introduction-to-open-source)
+
+### How to run it
 
 [here](https://snack.expo.io/@bolinhofrito/barbecue-app) :iphone:
+or local by installing expo-cli following the oficial [tutorial](https://expo.io/learn).
 
+### How to contribute
+
+[First, you can check here how to create Pull Requests](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github)
+
+If you are comfortable, create and solve issues to this App. It's under construction, so no fears ok?!
+Let's code together.
 
 Made with :heart:
